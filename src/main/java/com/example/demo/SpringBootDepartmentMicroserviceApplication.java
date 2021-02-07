@@ -8,6 +8,8 @@ public class SpringBootDepartmentMicroserviceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDepartmentMicroserviceApplication.class, args);
+		
+		
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.example.demo.bo;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,17 +12,18 @@ import com.example.demo.repository.DepartmentRepository;
 public class DepartmentBO {
 	
 	@Autowired
-	private DepartmentRepository departmentRepo;
+	private DepartmentRepository departmentRepository;
 
 	public Department save(Department department) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return departmentRepository.save(department);
 	}
 
 
-	public Department findDepartmentById(Long departmentId) {
-		// TODO Auto-generated method stub
-		return null;
+	public findDepartmentById(Long departmentId) {
+		
+		return departmentRepository.findDepartmentById(departmentId);
 	}
+
 
 }

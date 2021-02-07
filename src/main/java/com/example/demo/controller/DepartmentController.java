@@ -3,6 +3,7 @@ import java.lang.*;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,11 @@ public class DepartmentController {
 	@PostMapping("/")
 	public Department saveDepartment(@RequestBody Department department) {
 			
-			return departmentBO.save(department);
+			return departmentBO.saveDepartment(department);
+	}
+	
+	@GetMapping("/{id}")
+	public Department findDepartmentById(@RequestBody Long departmentId ) {
+		return departmentBO.findDepartmentById(departmentId);
 	}
 }
