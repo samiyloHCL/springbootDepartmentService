@@ -26,8 +26,8 @@ public class SpringBootDepartmentMicroserviceApplication {
 		
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
 		
-		executor.setCorePoolSize(1);
-		executor.setMaxPoolSize(1);
+		executor.setCorePoolSize(2);
+		executor.setMaxPoolSize(2);
 		executor.setQueueCapacity(500);
 		executor.setThreadNamePrefix("Tara Thread");
 		executor.initialize();
