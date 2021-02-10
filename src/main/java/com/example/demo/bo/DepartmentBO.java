@@ -14,9 +14,9 @@ public class DepartmentBO {
 	@Autowired
 	private DepartmentRepository departmentRepository;
 
-	public Department save(Department department) {
+	public Department saveDepartment(Department department) {
 		
-		return departmentRepository.save(department);
+		return departmentRepository.saveDepartment(department);
 	}
 
 
