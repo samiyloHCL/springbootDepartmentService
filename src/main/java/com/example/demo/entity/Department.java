@@ -19,6 +19,7 @@ public class Department {
 	private String blog;
 	private String type;
 	private String url;
+	
 	public String getName() {
 		return name;
 	}
@@ -42,6 +43,11 @@ public class Department {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	
+	@Override
+	public String toString() {
+		return "Department | name: " + name + " blog: " + blog + " type: " + type + " url: " + url;
 	}
 	
 	

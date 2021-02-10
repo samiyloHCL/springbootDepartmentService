@@ -18,7 +18,7 @@ import com.example.demo.entity.Department;
 public class LookupService {
 	
 	private static final Logger logger = LoggerFactory.getLogger(LookupService.class);
-	private static final String GITHUB_USERS_URL = "http://api.github.com/users/%s";
+	private static final String GITHUB_USERS_URL = "https://api.github.com/users/%s";
 	private final RestTemplate restTemplate;
 	
 	public LookupService(RestTemplateBuilder restTemplateBuilder) {
