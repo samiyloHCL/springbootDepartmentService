@@ -35,7 +35,7 @@ public class LookupController {
 		depoList.add("spring-security");
 	}
 	
-	@Scheduled(fixedRate = 2000)
+//	@Scheduled(fixedRate = 2000)
 	public void scheduledTasks() throws Exception {
 		CompletableFuture<Department> info = service.findDepartment(depoList.get(depoIndex));
 		
