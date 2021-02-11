@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<title>Support Form</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	
+	<style>
+		form div {
+			display: table-row;
+			padding: 4px
+		}
+		
+		lable, input, select {
+			display: table-cell;
+			margin: 5px;
+			text-align: left;
+		}
+		
+		form div div {
+			display: table-cell;
+		}
+	</style>
+	
+	<body>
+		<h2>E-Commerce Customer Support Form</h2>
+		<form action="#" th:action="@{/support}" th:object="${supportDetails}" method="post">
+		
+		</form>
+	</body>
+</html>
