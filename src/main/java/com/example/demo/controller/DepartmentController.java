@@ -4,19 +4,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/department")
 public class DepartmentController {
 		
-	@RequestMapping("/")
+	@RequestMapping("/home")
 	public String home() {
 			
-		return "We hare in Homne";
+		return "We hare in Department Home";
 	}
 	
 
-	@RequestMapping("/department")
+	@RequestMapping("/info")
 	public String error() {
 		
-		return "You are now on the department page";
+		return "You are now on the Department Info";
 	}
 
 }
