@@ -31,10 +31,18 @@ public class SupportFormController {
 	}
 	
 	@PostMapping("/support")
-	public String submitComplaint(@Valid @ModelAttribute SupportForm supportDetails, BindingResult bindingResult, Model model) {
+	public String submitComplaint(@Valid @ModelAttribute("supportDetails") SupportForm supportDetails, BindingResult bindingResult, Model model) {
 		
 		List<String> membershipList = Arrays.asList("Platnum", "Gold", "Silver");
+		model.addAttribute("membershipList", membershipList);
 		model.addAttribute("supportDetails", supportDetails);
+		
+		if (bindingResult.hasErrors()) {
+			System.out.println("Errors found!");
+			return "support";
+		}
+		
+		System.out.println("No errors found");
 		
 		return "submit";
 	}
