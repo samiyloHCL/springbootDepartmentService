@@ -3,8 +3,11 @@ package com.example.demo.controller;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,8 +31,9 @@ public class SupportFormController {
 	}
 	
 	@PostMapping("/support")
-	public String submitComplaint(@ModelAttribute SupportForm supportDetails, Model model) {
+	public String submitComplaint(@Valid @ModelAttribute SupportForm supportDetails, BindingResult bindingResult, Model model) {
 		
+		List<String> membershipList = Arrays.asList("Platnum", "Gold", "Silver");
 		model.addAttribute("supportDetails", supportDetails);
 		
 		return "submit";
