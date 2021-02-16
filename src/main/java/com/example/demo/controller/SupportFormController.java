@@ -35,7 +35,9 @@ public class SupportFormController {
 		
 		List<String> membershipList = Arrays.asList("Platnum", "Gold", "Silver");
 		model.addAttribute("membershipList", membershipList);
-		model.addAttribute("supportDetails", supportDetails);
+		
+		//Seems like we dont need this because we already added it in the Param section.
+		//model.addAttribute("supportDetails", supportDetails);
 		
 		if (bindingResult.hasErrors()) {
 			System.out.println("Errors found!");
