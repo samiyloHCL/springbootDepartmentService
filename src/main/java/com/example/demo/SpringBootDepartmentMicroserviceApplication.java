@@ -10,6 +10,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
+import com.example.demo.service.QuoteService;
+
 @EnableAsync
 @EnableScheduling
 @SpringBootApplication
@@ -19,6 +21,11 @@ public class SpringBootDepartmentMicroserviceApplication {
 		SpringApplication.run(SpringBootDepartmentMicroserviceApplication.class, args);
 		
 		
+	}
+	
+	@Bean
+	public QuoteService getQuoteService() {
+		return new QuoteService();
 	}
 	
 	@Bean

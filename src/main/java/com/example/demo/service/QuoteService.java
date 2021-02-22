@@ -21,6 +21,7 @@ public class QuoteService {
 		this.quotes.add(new Quote("I’ve never seen a job being done by a five-hundred-person engineering team that couldn’t be done better by fifty people.", "C. Gordon Bell"));
 	}
 	
+	//Grab a random number and grab that index from list of quotes
 	public Quote getQuote() {
 		Random rn = new Random();
 		int select = rn.nextInt(this.quotes.size());
