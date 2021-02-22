@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import com.example.demo.entity.Quote;
 
@@ -18,6 +19,12 @@ public class QuoteService {
 		this.quotes.add(new Quote("The fewer moving parts, the better. Exactly. No truer words were ever spoken in the context of engineering.", "Christian Cantrell"));
 		this.quotes.add(new Quote("When you want to know how things really work, study them when they’re coming apart.", "William Gibson"));
 		this.quotes.add(new Quote("I’ve never seen a job being done by a five-hundred-person engineering team that couldn’t be done better by fifty people.", "C. Gordon Bell"));
+	}
+	
+	public Quote getQuote() {
+		Random rn = new Random();
+		int select = rn.nextInt(this.quotes.size());
+		return this.quotes.get(select);
 	}
 
 }
