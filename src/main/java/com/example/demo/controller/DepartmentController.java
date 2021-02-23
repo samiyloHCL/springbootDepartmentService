@@ -1,6 +1,9 @@
 package com.example.demo.controller;
 
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Quote;
@@ -20,6 +23,12 @@ public class DepartmentController {
 	public Quote getQuote() {
 		
 		return this.quoteService.getQuote();
+	}
+	
+	@RequestMapping(value="/quote", method=RequestMethod.POST)
+	public void addQuote(@RequestBody Quote quote) {
+		
+		this.quoteService.addQuote(quote);
 	}
 		
 	@RequestMapping("/home")

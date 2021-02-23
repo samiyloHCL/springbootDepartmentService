@@ -11,6 +11,7 @@ public class QuoteService {
 	private List<Quote> quotes = new ArrayList<>();
 	
 	public QuoteService() {
+		//Initialize first quotes
 		this.quotes.add(new Quote("Engineers like to solve problems. If there are no problems handily available, they will create their own problems.", "Scott Adams"));
 		this.quotes.add(new Quote("Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.", "Antoine de Saint-Exupery"));
 		this.quotes.add(new Quote("The problem in this business isn’t to keep people from stealing your ideas; it's making them steal your ideas!", "Howard Aiken"));
@@ -26,6 +27,11 @@ public class QuoteService {
 		Random rn = new Random();
 		int select = rn.nextInt(this.quotes.size());
 		return this.quotes.get(select);
+	}
+	
+	//Add quote service
+	public void addQuote(Quote quote) {
+		this.quotes.add(quote);
 	}
 
 }
